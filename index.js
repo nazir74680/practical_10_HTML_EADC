@@ -8,7 +8,7 @@ const port = process.env.PORT || 7468;
 const url = "https://apikey-v2-1rwrvdtqy58vcgv9tn1kpazxasnz2wmf0qg3tnm96jsi:79a798a454654350e67116eb07328bcc@0c327564-6042-41a7-916e-332518318d02-bluemix.cloudantnosqldb.appdomain.cloud";
 const username = "apikey-v2-1rwrvdtqy58vcgv9tn1kpazxasnz2wmf0qg3tnm96jsi";
 const password = "79a798a454654350e67116eb07328bcc";
-const databaseName = "prac10";
+const databaseName = "practical-10";
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
