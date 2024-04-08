@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    
+</head>
+<body>
+    <style>
+    /* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    background-color: #343a40;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    margin: 0;
+}
+
+h2 {
+    background-color: #6c757d;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+form {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 35rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+button {
+    width: calc(100% - 20px);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus {
+    border-color: #6c757d;
+}
+
+button[type="submit"] {
+    background-color: #343a40;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #495057;
+}
+
+form button[type="submit"]:focus {
+    outline: none;
+}
+
+
+    </style>
+    <h1>User Management System</h1>
+
+    <!-- Insert User Form -->
+    <h2>Add New User</h2>
+    <form id="insertForm" action="https://practical-10.1ehb4bdljuoi.eu-gb.codeengine.appdomain.cloud/api/user" method="POST">
+        <label for="insertId">User ID:</label>
+        <input type="number" id="insertId" name="_id" required><br><br>
+
+        <label for="insertName">Name:</label>
+        <input type="text" id="insertName" name="name" required><br><br>
+
+        <label for="insertEmail">Email:</label>
+        <input type="email" id="insertEmail" name="email" required><br><br>
+
+        <label for="insertPhone">Phone:</label>
+        <input type="tel" id="insertPhone" name="phone" required><br><br>
+
+        <label for="insertCity">City:</label>
+        <input type="text" id="insertCity" name="city"><br><br>
+
+        <label for="insertCountry">Country:</label>
+        <input type="text" id="insertCountry" name="country"><br><br>
+
+        <label for="insertPincode">Pincode:</label>
+        <input type="text" id="insertPincode" name="pincode"><br><br>
+
+        <button type="submit">Add User</button>
+    </form>
+
+    <!-- Update User Form -->
+    <h2>Update User Data</h2>
+    <form id="updateForm" action="https://practical-10.1ehb4bdljuoi.eu-gb.codeengine.appdomain.cloud/api/update" method="POST">
+        <label for="updateId">User ID:</label>
+        <input type="number" id="updateId" name="_id" required><br><br>
+
+        <label for="updateRevId">Revision ID:</label>
+        <input type="text" id="updateRevId" name="_rev" required><br><br>
+
+        <label for="updateName">Name:</label>
+        <input type="text" id="updateName" name="name"><br><br>
+
+        <label for="updateEmail">Email:</label>
+        <input type="email" id="updateEmail" name="email"><br><br>
+
+        <label for="updatePhone">Phone:</label>
+        <input type="tel" id="updatePhone" name="phone"><br><br>
+
+        <label for="updateCity">City:</label>
+        <input type="text" id="updateCity" name="city"><br><br>
+
+        <label for="updateCountry">Country:</label>
+        <input type="text" id="updateCountry" name="country"><br><br>
+
+        <label for="updatePincode">Pincode:</label>
+        <input type="text" id="updatePincode" name="pincode"><br><br>
+
+        <button type="submit">Update User Data</button>
+    </form>
+
+    <h2>Delete User Data</h2>
+    <form id="deleteForm" action="https://practical-10.1ehb4bdljuoi.eu-gb.codeengine.appdomain.cloud/api/delete" method="POST">
+        <label for="deleteId">Document ID:</label>
+        <input type="text" id="deleteId" name="id" required><br><br>
+        
+        <label for="deleteRev">Revision ID:</label>
+        <input type="text" id="deleteRev" name="rev" required><br><br>
+    
+        <button type="submit">Delete Document</button>
+    </form>
+
+    <!-- Get All Users Form -->
+    <h2>Get All Users Data</h2>
+    <form id="getAllForm" action="https://practical-10.1ehb4bdljuoi.eu-gb.codeengine.appdomain.cloud/api/all" method="GET">
+        <button type="submit">Get All Users Data</button>
+    </form>
+</body>
+</html>
